@@ -1,10 +1,25 @@
 aid: 1200pharma
 name: 1200 Pharma
-description: '1200 Pharma is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  1200 Pharma LLC is a privately held pre-clinical drug discovery company founded in 2017 and
+  headquartered in Culver City, California, with roots in Pasadena. It was launched by Caltech
+  chemist Brian Stoltz, UCLA translational oncologist Dennis Slamon and chief executive David
+  Licata, and it pairs Caltech medicinal-chemistry methodology with UCLA biomarker-driven
+  screening assays to identify novel small-molecule oncology candidates — including KRAS and CDK
+  inhibitors — at a fraction of the industry-average cost and timeline. The company employs
+  roughly 20-50 people, has filed patents covering indole-based anti-cancer compounds, and has
+  raised approximately $14.1 million from Kairos Ventures, Vest Coast Capital, OCV Partners,
+  Alexandria Venture Investments, Pasadena Bio and the National Institutes of Health. Its product
+  is drug intellectual property and discovery partnerships, not software: no developer program,
+  public API, SDK, developer portal or machine-readable contract of any kind could be found, and
+  no api/docs/developer hostname exists under its domain. At the time of profiling its only web
+  property, 1200pharma.com, was not being served — the Cloudflare edge in front of it terminated
+  every TLS handshake and answered plain HTTP with error 1001 — so the corporate site itself could
+  not be read.
 url: https://raw.githubusercontent.com/api-evangelist/1200pharma/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-harvest-source-url: https://equityzen.com/company/1200pharma
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,6 +27,15 @@ created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Drug Discovery
+- Medicinal Chemistry
+- Oncology
+- Small Molecule
+- Life Sciences
+- Healthcare
+- United States
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +43,33 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/1200pharma-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/1200pharma
+  url: https://1200pharma.com/
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    1200 Pharma is a pre-clinical small-molecule oncology discovery lab whose product is drug IP and
+    partnerships rather than software — no GitHub organization exists, no package is published to npm
+    or PyPI, and api/docs/developer/portal/app/data/platform hostnames all return NXDOMAIN under its
+    domain — and its one web property, 1200pharma.com, could not be read at all because the Cloudflare
+    edge in front of it terminates every TLS handshake with alert 40 before presenting a certificate
+    (reproduced independently from a third-party headless-browser egress) and answers plain HTTP on
+    every path with 409 Conflict / "error code: 1001".
+  evidence:
+    - url: https://1200pharma.com/
+      status: 0
+    - url: http://1200pharma.com/
+      status: 409
+    - url: http://1200pharma.com/.well-known/security.txt
+      status: 409
+    - url: https://api.github.com/search/users?q=1200pharma
+      status: 200
+  checked: '2026-09-05'

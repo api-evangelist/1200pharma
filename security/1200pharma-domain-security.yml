@@ -1,0 +1,12 @@
+generated: '2026-09-05'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: 1200pharma.com
+  https: false
+domains:
+- domain: 1200pharma.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false

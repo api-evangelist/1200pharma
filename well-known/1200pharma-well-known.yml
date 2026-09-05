@@ -1,0 +1,130 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Live probes of the named /.well-known/ path list plus contract-discovery roots on every host
+  1200 Pharma's record knows. No API baseURL or OpenAPI servers[] host exists for this company,
+  so the probe surface is the registrable domain and its www alias only.
+note: >-
+  NO DOCUMENT WAS SERVED, AND NOTHING COULD BE READ. Every HTTPS request to 1200pharma.com and
+  www.1200pharma.com was terminated by the edge with a TLS handshake_failure (alert 40) before any
+  certificate was presented — reproduced with LibreSSL 3.3.6, OpenSSL 3.x, and independently from a
+  third-party headless-Chrome egress (ERR_SSL_VERSION_OR_CIPHER_MISMATCH), so this is a
+  provider-side termination failure and not a block on our crawler. Plain HTTP reaches Cloudflare
+  and answers every path with 409 Conflict / "error code: 1001" (Cloudflare origin DNS resolution
+  error). status 0 below means the TLS handshake never completed and there was therefore no HTTP
+  status to record; it is not a 404. No WellKnown or SecurityTxt pointer is wired into apis.yml
+  because no path returned a document — this file records an absence, not a presence.
+hosts:
+- host: 1200pharma.com
+  scheme_note: >-
+    https = TLS handshake_failure (no HTTP status); http = 409 Conflict from Cloudflare (error 1001)
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+- host: www.1200pharma.com
+  scheme_note: >-
+    CNAME to 1200pharma.com; identical behaviour — https TLS handshake_failure, http 409
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery, run in full against every host this record knows. All misses.
+  dns:
+  - host: api.1200pharma.com
+    result: NXDOMAIN
+  - host: docs.1200pharma.com
+    result: NXDOMAIN
+  - host: developer.1200pharma.com
+    result: NXDOMAIN
+  - host: dev.1200pharma.com
+    result: NXDOMAIN
+  - host: portal.1200pharma.com
+    result: NXDOMAIN
+  - host: app.1200pharma.com
+    result: NXDOMAIN
+  - host: data.1200pharma.com
+    result: NXDOMAIN
+  - host: platform.1200pharma.com
+    result: NXDOMAIN
+  probes:
+  - url: https://1200pharma.com/openapi.json
+    status: 0
+    result: tls-handshake-failure
+  - url: https://1200pharma.com/swagger.json
+    status: 0
+    result: tls-handshake-failure
+  - url: https://1200pharma.com/api-docs
+    status: 0
+    result: tls-handshake-failure
+  - url: https://1200pharma.com/wp-json/
+    status: 0
+    result: tls-handshake-failure
+  - url: https://1200pharma.com/llms.txt
+    status: 0
+    result: tls-handshake-failure
+  - url: https://1200pharma.com/robots.txt
+    status: 0
+    result: tls-handshake-failure
+  - url: https://1200pharma.com/sitemap.xml
+    status: 0
+    result: tls-handshake-failure
+  - url: http://1200pharma.com/openapi.json
+    status: 409
+    result: cloudflare-error-1001
+  - url: http://1200pharma.com/wp-json/
+    status: 409
+    result: cloudflare-error-1001
+  - url: http://1200pharma.com/llms.txt
+    status: 409
+    result: cloudflare-error-1001
+  graphql: not-probed-no-endpoint-evidence
+  mcp: not-probed-no-endpoint-evidence
+  ogc: not-applicable
+  grpc_wsdl: >-
+    No GitHub organization exists for 1200 Pharma (GitHub user and repository search both return
+    0 results), and no host is reachable to probe ?wsdl. No published .proto or WSDL found.
