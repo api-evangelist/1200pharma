@@ -64,5 +64,79 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-1200 Pharma is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/1200pharma
+1200 Pharma LLC is a privately held pre-clinical drug discovery company founded in 2017 and headquartered in Culver City, California, with roots in Pasadena. It was launched by Caltech chemist Brian Stoltz, UCLA translational oncologist Dennis Slamon and chief executive David Licata, and it pairs Caltech medicinal-chemistry methodology with UCLA biomarker-driven screening assays to identify novel small-molecule oncology candidates — including KRAS and CDK inhibitors — at a fraction of the industry-average cost and timeline. The company employs roughly 20-50 people, has filed patents covering indole-based anti-cancer compounds, and has raised approximately $14.1 million from Kairos Ventures, Vest Coast Capital, OCV Partners, Alexandria Venture Investments, Pasadena Bio and the National Institutes of Health. Its product is drug intellectual property and discovery partnerships, not software: no developer program, public API, SDK, developer portal or machine-readable contract of any kind could be found, and no api/docs/developer hostname exists under its domain. At the time of profiling its only web property, 1200pharma.com, was not being served — the Cloudflare edge in front of it terminated every TLS handshake and answered plain HTTP with error 1001 — so the corporate site itself could not be read.
+
+**Areas:** Company · Biotechnology · Pharmaceuticals · Drug Discovery · Medicinal Chemistry · Oncology · Small Molecule · Life Sciences · Healthcare · United States
+
+## 1200 Pharma on APIs.io
+
+Everything profiled for 1200 Pharma is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/1200pharma/](https://apis.io/providers/1200pharma/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [1200Pharma Domain Security](https://apis.io/security/1200pharma/1200pharma-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://1200pharma.com/)
+
+## API Evangelist rating
+
+**Kin Score 3.4** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 44.6 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/1200pharma/](https://apis.io/providers/1200pharma/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for 1200 Pharma: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/1200pharma/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
